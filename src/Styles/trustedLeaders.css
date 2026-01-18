@@ -1,0 +1,438 @@
+/* ===============================
+   TRUSTED BY INDUSTRY LEADERS
+   =============================== */
+
+.trusted-section {
+  width: 100%;
+  padding: 160px 0;
+  background: radial-gradient(circle at right, #183884, #020617);
+}
+
+.light .trusted-section {
+  background: #ffffff;
+}
+
+.trusted-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+}
+
+/* ---------- LEFT ---------- */
+
+.trusted-title {
+  font-size: clamp(42px, 6vw, 84px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+}
+
+.trusted-title span {
+  color: #facc15;
+}
+
+.light .trusted-title {
+  color: #0f172a;
+}
+
+.light .trusted-title span {
+  color: #5044e5;
+}
+
+.trusted-metrics {
+  margin-top: 80px;
+  display: flex;
+  gap: 80px;
+}
+
+.trusted-metrics h3 {
+  font-size: 48px;
+  color: white;
+}
+
+.trusted-metrics span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.metric-label {
+  color: #facc15;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.light .trusted-metrics h3 {
+  color: #0f172a;
+}
+
+/* ---------- RIGHT ---------- */
+
+.trusted-right {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.logo-marquee {
+  height: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    rgb(67, 32, 163) 80%,
+    transparent
+  );
+}
+
+.logo-track {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  animation: scrollUp 14s linear infinite;
+}
+
+.logo-track img {
+  width: 140px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Continuous vertical motion */
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  .trusted-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .trusted-right {
+    height: 300px;
+  }
+
+  .trusted-metrics {
+    gap: 40px;
+  }
+}
+/* ===========================
+   TRUSTED LEADERS – SPACING FIX
+   =========================== */
+
+.trusted-section {
+  background: radial-gradient(
+    circle at top left,
+    #0f172a 0%,
+    #020617 60%
+  );
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+/* Main container */
+.trusted-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 120px;   /* ✅ MORE LEFT SPACE */
+  padding-right: 40px;  /* ✅ REDUCED RIGHT SPACE */
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+.trusted-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* space between title & metrics */
+}
+
+/* Title spacing */
+.trusted-title {
+  font-size: clamp(48px, 6vw, 84px);
+  font-weight: 650;
+  line-height: 1.15;        /* ✅ better readability */
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.trusted-title span {
+  color: #facc15; /* yellow */
+}
+
+/* Metrics section */
+.trusted-metrics {
+  display: flex;
+  gap: 80px; /* more space between CAMPAIGNS & BRANDS */
+}
+
+.trusted-metrics h3 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+.metric-label {
+  color: #facc15;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+}
+
+/* RIGHT LOGO AREA */
+.trusted-right {
+  display: flex;
+  justify-content: flex-start; /* ✅ PULL LOGOS LEFT */
+  position: relative;
+}
+
+/* Logo marquee wrapper */
+.logo-marquee {
+  height: 460px;
+  width: 320px;          /* ✅ NARROWER WIDTH */
+  overflow: hidden;
+  mask-image: linear-gradient(
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}
+
+/* Moving column */
+.logo-track {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  animation: scrollY 18s linear infinite;
+}
+
+/* Logos */
+.logo-track img {
+  max-height: 40px;
+  max-width: 380px;
+  opacity: 0.45;
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease;
+}
+
+.logo-track img:hover {
+  opacity: 0.85;
+  filter: grayscale(0%);
+}
+
+/* Vertical animation */
+@keyframes scrollY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .trusted-container {
+    grid-template-columns: 1fr;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 64px;
+  }
+
+  .trusted-right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .trusted-section {
+    padding: 80px 0;
+  }
+
+  .trusted-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .trusted-title {
+    font-size: 42px;
+  }
+
+  .trusted-metrics {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+/* ===============================
+   TRUSTED LEADERS – OUR WORK PAGE
+   =============================== */
+
+.trusted-section {
+  width: 100%;
+  background: linear-gradient(135deg, #050914, #0b1022);
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+/* MAIN GRID */
+.trusted-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* ⬅ wider logo column */
+  gap: 80px;
+  align-items: center;
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.trusted-left {
+  color: #ffffff;
+}
+
+.trusted-title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+}
+
+.trusted-title span {
+  color: #facc15; /* Yellow highlight */
+}
+
+/* METRICS */
+.trusted-metrics {
+  display: flex;
+  gap: 80px;
+  margin-top: 80px;
+}
+
+.metric-label {
+  color: #facc15;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.trusted-metrics h3 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.trusted-metrics span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ================= RIGHT LOGO FLOW ================= */
+
+.trusted-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGO COLUMN SIZE */
+.logo-marquee {
+  height: 420px;   /* ⬆ taller column */
+  width: 280px;    /* ⬆ wider column */
+  overflow: hidden;
+  position: relative;
+}
+
+/* LOGO TRACK */
+.logo-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px; /* ⬆ more spacing between logos */
+  animation: verticalScroll 14s linear infinite;
+}
+
+/* LOGO STYLE */
+.logo-track img {
+  max-height: 48px; /* ⬆ bigger logos */
+  opacity: 0.55;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.logo-track img:hover {
+  opacity: 0.9;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .trusted-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .trusted-title {
+    font-size: 48px;
+  }
+
+  .trusted-metrics {
+    gap: 40px;
+  }
+
+  .logo-marquee {
+    width: 220px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .trusted-section {
+    padding: 80px 0;
+  }
+
+  .trusted-title {
+    font-size: 38px;
+  }
+
+  .trusted-metrics {
+    flex-direction: column;
+    gap: 32px;
+  }
+}

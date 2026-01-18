@@ -1,0 +1,81 @@
+/* ===========================
+   OUR WORK HERO SECTION
+   =========================== */
+
+.work-hero {
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+
+  /* spacing under navbar */
+  padding-top: 80px;
+  padding-bottom: 60px;
+
+  background: linear-gradient(
+    120deg,
+    #0b1020,
+    #183884
+  );
+}
+
+/* Dark / Light theme support */
+.dark .work-hero {
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #020617
+  );
+}
+
+.work-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* LEFT SPACING LIKE VIDEO */
+  padding-left: 80px;
+  padding-right: 20px;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .work-hero-content {
+    padding-left: 32px;
+  }
+}
+
+/* TITLE */
+.work-title {
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+}
+
+/* Highlighted word */
+.work-title span {
+  color: #facc15; /* Yellow accent */
+}
+
+/* SUBTITLE */
+.work-subtitle {
+  margin-top: 15px;
+  max-width: 640px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Light theme text */
+.light .work-title {
+  color: #0f172a;
+}
+
+.light .work-title span {
+  color: #5044e5;
+}
+
+.light .work-subtitle {
+  color: #475569;
+}
