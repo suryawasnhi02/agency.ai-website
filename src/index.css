@@ -12,6 +12,7 @@
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,32 +29,25 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   height: 36px;
   padding: 0 18px;
-
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-
   color: #ffffff;
   background: linear-gradient(135deg, #3b82f6, #2563eb);
-
   box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
-
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
 }
 
-/* Arrow */
 .nav-connect-arrow {
   width: 12px;
   transition: transform 0.25s ease;
 }
 
-/* Hover */
 .nav-connect-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
@@ -63,16 +57,15 @@ html {
   transform: translateX(4px);
 }
 
-/* Click */
 .nav-connect-btn:active {
   transform: scale(0.96);
 }
 
-/* 🌙 DARK MODE SUPPORT */
 .dark .nav-connect-btn {
   background: linear-gradient(135deg, #2563eb, #1e40af);
   box-shadow: 0 8px 24px rgba(30, 64, 175, 0.6);
 }
+
 .nav-connect-btn::after {
   content: "";
   position: absolute;
@@ -83,36 +76,31 @@ html {
   opacity: 0.35;
   z-index: -1;
 }
+
 /* =========================
-   CONNECT BUTTON (NAVBAR)
-========================= */
+   CONNECT BUTTON
+   ========================= */
 
 .connect-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-
   padding: 8px 18px;
   border-radius: 999px;
-
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-
   color: #ffffff !important;
   background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-
   box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
   transition: all 0.25s ease;
 }
 
-/* Arrow */
 .connect-btn img {
   width: 12px;
   transition: transform 0.25s ease;
 }
 
-/* Hover */
 .connect-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
@@ -122,41 +110,37 @@ html {
   transform: translateX(4px);
 }
 
-/* Active */
 .connect-btn:active {
   transform: scale(0.95);
 }
 
-/* DARK MODE */
 .dark .connect-btn {
   background: linear-gradient(135deg, #2563eb, #1e40af);
 }
 
 /* ===============================
-   GLOBAL SPACING SYSTEM (30px+)
+   GLOBAL SPACING SYSTEM
    =============================== */
 
-/* Section spacing */
 .section {
-  padding-top: 3rem;   /* 48px */
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 @media (min-width: 640px) {
   .section {
-    padding-top: 4rem; /* 64px */
+    padding-top: 4rem;
     padding-bottom: 4rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding-top: 5rem; /* 80px */
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
 }
 
-/* Vertical gap helpers */
 .stack-30 > * + * {
   margin-top: 30px;
 }
@@ -169,7 +153,6 @@ html {
   margin-top: 50px;
 }
 
-/* Section margin (between major blocks) */
 .section-gap {
   margin-top: 30px;
 }
@@ -180,105 +163,29 @@ html {
   }
 }
 
-/* Content width consistency */
 .container-xl {
   max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  margin: auto;
+  padding: 0 1.5rem;
 }
+
 /* ===========================
-   FOOTER SPACING FIX (IMAGE MATCH)
+   FOOTER
    =========================== */
 
-/* Footer outer spacing */
-footer {
-  margin-top: 80px;
-  padding-bottom: 0px;
-}
-
-/* Main footer container */
-footer > div {
-  padding-top: 80px;   /* top spacing like image */
-  padding-bottom: 0px;
-}
-
-/* Top footer content spacing */
-footer .flex.justify-between {
-  gap: 80px; /* space between left & right sections */
-}
-
-/* Logo block spacing */
-footer img[alt="logo"] {
-  margin-bottom: 20px;
-}
-
-/* Footer paragraph spacing */
-footer p {
-  line-height: 1.6;
-}
-
-/* Footer navigation spacing */
-footer ul {
-  margin-top: 20px;
-}
-
-/* Divider spacing */
-footer hr {
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-
-/* Bottom footer row spacing */
-footer .pb-6 {
-  padding-bottom: 30px;
-}
-
-/* Social icons spacing */
-footer .flex.items-center img {
-  width: 20px;
-  opacity: 0.7;
-}
-
-footer .flex.items-center img:hover {
-  opacity: 1;
-}
-
-/* Newsletter spacing */
-footer h3 {
-  margin-bottom: 12px;
-}
-
-footer input {
-  height: 48px;
-}
-
-footer button {
-  height: 48px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-/* ===========================
-   FOOTER SPACING FIX (IMAGE MATCH)
-   =========================== */
-
-/* Footer full-width background */
 footer {
   width: 100%;
   margin-top: 80px;
   padding-bottom: 0;
 }
 
-/* INNER FOOTER CONTENT (LEFT & RIGHT SPACING) */
 footer > div {
   padding-top: 80px;
   padding-bottom: 0;
-  padding-left: 10px;   /* ✅ LEFT spacing */
-  padding-right: 10px;  /* ✅ RIGHT spacing */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-/* Center content nicely on large screens */
 @media (min-width: 640px) {
   footer > div {
     padding-left: 40px;
@@ -293,60 +200,15 @@ footer > div {
   }
 }
 
-/* Top footer content spacing */
-footer .flex.justify-between {
-  gap: 80px;
-}
-
-/* Logo spacing */
-footer img[alt="logo"] {
-  margin-bottom: 20px;
-}
-
-/* Paragraph spacing */
-footer p {
-  line-height: 1.6;
-}
-
-/* Footer navigation spacing */
-footer ul {
-  margin-top: 20px;
-}
-
-/* Divider spacing */
 footer hr {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
-/* Bottom footer row spacing (no extra bottom gap) */
-footer .pb-6 {
-  padding-bottom: 12px; /* reduced to remove black gap */
-}
+/* ===========================
+   TAWK CHAT FIX
+   =========================== */
 
-/* Social icons */
-footer .flex.items-center img {
-  width: 20px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
-
-footer .flex.items-center img:hover {
-  opacity: 1;
-}
-
-/* Newsletter spacing */
-footer h3 {
-  margin-bottom: 12px;
-}
-
-footer input,
-footer button {
-  height: 48px;
-}
-
-/* Tawk.to Mobile Fullscreen Fix */
-/* 🔥 FIX TAWK CHAT ON MOBILE */
 @media (max-width: 768px) {
   iframe[src*="tawk.to"] {
     position: fixed !important;
@@ -358,117 +220,31 @@ footer button {
   }
 }
 
-}
-
 /* ===========================
-   NAVBAR SPACING & ALIGNMENT
-   (MATCH IMAGE)
+   NAVBAR
    =========================== */
 
-/* Navbar height & vertical balance */
 .navbar {
-  height: 65px;               /* Taller navbar like image */
+  height: 65px;
   display: flex;
   align-items: center;
 }
 
-/* Main nav container spacing */
 .navbar > div {
   width: 100%;
-  padding-left: 80px;         /* Left spacing (logo breathing room) */
-  padding-right: 0px;        /* Right spacing (connect button) */
+  padding-left: 80px;
 }
 
-/* Logo alignment */
-.navbar img[alt="logo"] {
-  transform: translateY(1px); /* optical alignment */
-}
-
-/* Center nav links */
 .navbar nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Nav links look */
-.navbar nav a {
-  color: #6b7280;             /* gray-500 */
-  font-weight: 500;
-}
-
-.dark .navbar nav a {
-  color: #ffffff;             /* white in dark mode */
-}
-
 .navbar nav a:hover {
   color: var(--color-primary);
 }
 
-/* Connect button polish */
-.navbar a[href="#contact-us"] {
-  padding: 10px 28px;
-  font-size: 14px;
-  border-radius: 999px;
-}
-/* ===============================
-   CONNECT BUTTON (RESPONSIVE)
-================================ */
-
-.connect-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-.connect-btn img {
-  width: 14px;
-}
-
-/* Hover */
-.connect-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
-}
-
-/* ===============================
-   TABLET
-================================ */
-@media (max-width: 1024px) {
-  .connect-btn {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
-}
-
-/* ===============================
-   MOBILE
-================================ */
-@media (max-width: 768px) {
-  .connect-btn {
-    padding: 8px 12px;
-    gap: 0;
-  }
-
-  .connect-text {
-    display: none; /* 🔥 icon-only on mobile */
-  }
-
-  .connect-btn img {
-    width: 16px;
-  }
-}
-
-/* Mobile fix */
 @media (max-width: 768px) {
   .navbar nav {
     position: static;
@@ -480,35 +256,12 @@ footer button {
     padding-right: 24px;
   }
 }
-.navbar img[alt="logo"] {
-  margin-left: 5px;
-}
 
-@media (min-width: 768px) {
-  .navbar img[alt="logo"] {
-    margin-left: 10px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===============================
-   SERVICE CARD – IMAGE MATCH
-   =============================== */
+/* ===========================
+   SERVICE CARD
+   =========================== */
 
 .service-card {
-  position: relative;
   background: #ffffff;
   border-radius: 20px;
   padding: 32px;
@@ -520,97 +273,4 @@ footer button {
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 35px 70px rgba(80, 68, 229, 0.18);
-  border-color: transparent;
-}
-
-/* Gradient border on hover */
-.service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #4f46e5, #6366f1, #a855f7);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.service-card:hover::before {
-  opacity: 1;
-}
-
-/* Card content */
-.service-card-content {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-/* Icon */
-.service-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
-  background: rgba(99, 102, 241, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-icon img {
-  width: 24px;
-  height: 24px;
-}
-
-/* Text */
-.service-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #6b7280;
-  line-height: 1.5;
-}
-/* ===========================
-   PRIMARY SUBMIT BUTTON STYLE
-   =========================== */
-
-button[type="submit"] {
-  background: linear-gradient(135deg, #5044e5, #6a7cff);
-  box-shadow: 0 12px 30px rgba(80, 68, 229, 0.35);
-  transition: all 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 18px 45px rgba(80, 68, 229, 0.45);
-}
-
-button[type="submit"]:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: 0 8px 20px rgba(80, 68, 229, 0.3);
-}
-/* ===========================
-   REMOVE FOOTER BOTTOM GAP
-   =========================== */
-
-footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-footer > div {
-  padding-bottom: 0 !important;
-}
-
-footer hr {
-  margin-bottom: 16px !important;
 }
