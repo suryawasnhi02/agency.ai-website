@@ -62,14 +62,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="services-hero-logos">
-          <img src={assets.zomato} alt="zomato" />
-          <img src={assets.fastrack} alt="fastrack" />
-          <img src={assets.boat} alt="boat" />
-          <img src={assets.flipkart} alt="flipkart" />
-          <img src={assets.sprite} alt="sprite" />
-          <img src={assets.nykaa} alt="nykaa" />
-        </div>
+      
       </section>
 
       {/* 🧩 SERVICES GRID */}

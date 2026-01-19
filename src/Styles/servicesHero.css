@@ -66,27 +66,7 @@
   box-shadow: 0 40px 80px rgba(0,0,0,0.6);
 }
 
-/* LOGOS */
-.services-hero-logos {
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  flex-wrap: wrap;
-  opacity: 0.6;
-}
 
-.services-hero-logos img {
-  height: 28px;
-  filter: grayscale(1);
-  transition: opacity 0.3s ease;
-}
-
-.services-hero-logos img:hover {
-  opacity: 1;
-  filter: none;
-}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

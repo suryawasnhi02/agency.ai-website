@@ -7,7 +7,7 @@ import ServicesPage from './pages/ServicesPage'
 import WorkPage from './pages/WorkPage'
 import ContactPage from './pages/ContactPage'
 import { Toaster } from 'react-hot-toast'
-
+import TawkTo from './components/TawkTo'   // ✅ ADD THIS
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -16,6 +16,9 @@ const App = () => {
 
   return (
     <div className="dark:bg-black min-h-screen">
+       {/* ✅ TAWK CHATBOT (GLOBAL) */}
+      <TawkTo />
+      
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
 

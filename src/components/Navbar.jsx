@@ -63,40 +63,67 @@ const Navbar = ({ theme, setTheme }) => {
           />
 
           {/* CONNECT BUTTON */}
-          <Link
+    <Link
   to="/contact"
-  className="connect-btn hidden md:flex"
+  className="
+    hidden sm:flex
+    items-center gap-3
+    bg-primary text-white
+    px-6 py-3
+    rounded-full
+    text-base font-semibold
+    transition-all duration-300
+    hover:scale-105
+    hover:shadow-xl
+    active:scale-95
+  "
 >
-  Connect
-  <img src={assets.arrow_icon} alt="arrow" />
+  <span>Connect</span>
+  <img src={assets.arrow_icon} alt="arrow" className="w-4" />
 </Link>
+ 
+
+
 
         </div>
       </div>
 
-      {/* MOBILE SIDEBAR */}
-     {/* MOBILE SIDEBAR */}
-<div
-  className={`
-    fixed top-0 right-0 h-screen w-full
-    bg-primary text-white z-50
-    flex flex-col gap-6 pt-24 px-10 text-sm
-    transform transition-transform duration-300
-    ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'}
-  `}
->
-  <img
-    src={assets.close_icon}
-    alt="close"
-    className="w-5 absolute top-6 right-6 cursor-pointer"
-    onClick={() => setSidebarOpen(false)}
-  />
+     {/* OVERLAY (mobile only) */}
+{/* OVERLAY + SIDEBAR (render ONLY when open) */}
+{sidebarOpen && (
+  <>
+    {/* OVERLAY */}
+    <div
+      className="fixed inset-0 bg-black/40 z-40 md:hidden"
+      onClick={() => setSidebarOpen(false)}
+    />
 
-  <a onClick={() => setSidebarOpen(false)} href="/">Home</a>
-  <a onClick={() => setSidebarOpen(false)} href="/services">Services</a>
-  <a onClick={() => setSidebarOpen(false)} href="/our-work">Our work</a>
-  <a onClick={() => setSidebarOpen(false)} href="/contact">Contact Us</a>
-</div>
+    {/* SIDEBAR */}
+    <div
+      className="
+        fixed top-0 right-0 h-screen w-[75%] max-w-sm
+        bg-primary text-white z-50
+        flex flex-col gap-6 pt-24 px-10 text-base
+        transition-transform duration-300
+        md:hidden
+      "
+    >
+      <img
+        src={assets.close_icon}
+        alt="close"
+        className="w-5 absolute top-6 right-6 cursor-pointer"
+        onClick={() => setSidebarOpen(false)}
+      />
+
+      <Link onClick={() => setSidebarOpen(false)} to="/">Home</Link>
+      <Link onClick={() => setSidebarOpen(false)} to="/services">Services</Link>
+      <Link onClick={() => setSidebarOpen(false)} to="/our-work">Our Work</Link>
+      <Link onClick={() => setSidebarOpen(false)} to="/contact">Contact Us</Link>
+    </div>
+  </>
+)}
+
+
 
     </header>
   )
