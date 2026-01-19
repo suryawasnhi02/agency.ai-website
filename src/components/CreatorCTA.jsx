@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/creatorCTA.css";
+import "../styles/creatorcta.css";
 import { Link } from "react-router-dom";
 
 const CreatorCTA = () => {

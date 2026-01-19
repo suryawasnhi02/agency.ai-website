@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/ourWork.css";
+import "../styles/ourwork.css";
 
 const OurWorkHero = () => {
   return (

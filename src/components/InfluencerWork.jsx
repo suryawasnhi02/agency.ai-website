@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/influencerWork.css"; // ✅ CORRECT PATH
+import "../styles/influencerwork.css"; // ✅ CORRECT PATH
 
 
 const influencers = [

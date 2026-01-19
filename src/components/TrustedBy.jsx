@@ -1,6 +1,6 @@
 import React from "react";
 import { company_logos } from "../assets/assets";
-import "../styles/trustedLeaders.css";
+import "../styles/trustedleaders.css";
 
 const TrustedBy = () => {
   return (
